@@ -8,11 +8,11 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
     
-    new Quote(1, 'Rebuildimg character', 'When you screw up and no one is saying anything to you anymore, it means they gave up',new Date(2020,3,14)),
-    new Quote(2,'Teamwork','You cant get there alone: make people feel better',new Date(2020,3,14)),
-    new Quote(3,'Dedication','Brick walls are there to stop people who dont want it badly enough',new Date(2020,3,14)),
-    new Quote(4,'Innovation','Move from experiencing to making',new Date(2020,3,14)),
-    new Quote(5,'Sadness','Experirence is what you ger when you dont get what you wanted',new Date(2020,3,14)),
+    new Quote(1, 'Rebuilding Character', 'When you screw up and no one is saying anything to you anymore, it means they gave up.',new Date(2020,3,14)),
+    new Quote(2,'Teamwork','You cant get there alone: make people feel better..',new Date(2020,3,14)),
+    new Quote(3,'Dedication','Brick walls are there to stop people who don\'t want it badly enough.',new Date(2020,3,14)),
+    new Quote(4,'Innovation','Move from experiencing to making.',new Date(2020,3,14)),
+    new Quote(5,'Sadness','Experirence is what you get when you don\'t get what you wanted.',new Date(2020,3,14)),
     // new Quote(6,'Plot my world domination plan','Cause I am an evil overlord',new Date(2030,3,14)),
   ];
 
