@@ -8,11 +8,11 @@ import { Quote } from '../quote';
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
     
-    new Quote(1, 'Watch finding Nemo', 'Find an online version and watch merlin find his son',new Date(2020,3,14)),
-    new Quote(2,'Buy Cookies','I have to buy cookies for the parrot',new Date(2019,6,9)),
-    new Quote(3,'Get new Phone Case','Diana has her birthday coming up soon',new Date(2022,1,12)),
-    new Quote(4,'Get Dog Food','Pupper likes expensive snacks',new Date(2019,0,18)),
-    new Quote(5,'Solve math homework','Damn Math',new Date(2019,2,14)),
+    new Quote(1, 'Rebuildimg character', 'When you screw up and no one is saying anything to you anymore, it means they gave up',new Date(2020,3,14)),
+    new Quote(2,'Teamwork','You cant get there alone: make people feel better',new Date(2020,3,14)),
+    new Quote(3,'Dedication','Brick walls are there to stop people who dont want it badly enough',new Date(2020,3,14)),
+    new Quote(4,'Innovation','Move from experiencing to making',new Date(2020,3,14)),
+    new Quote(5,'Sadness','Experirence is what you ger when you dont get what you wanted',new Date(2020,3,14)),
     // new Quote(6,'Plot my world domination plan','Cause I am an evil overlord',new Date(2030,3,14)),
   ];
 
@@ -21,7 +21,7 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
-  deleteGoal(isComplete, index){
+  deletequote(isComplete, index){
     if (isComplete) {
       let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
 
@@ -30,8 +30,13 @@ export class QuoteComponent implements OnInit {
       }
     }
   }
-  
-  
+  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!###### check!!!!
+  addNewQuote(quote: Quote){ 
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
 
   constructor() {}
 
