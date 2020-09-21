@@ -21,6 +21,13 @@ export class QuoteComponent implements OnInit {
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
+  addNewQuote(quote: Quote){ 
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength+1;
+    quote.completeDate = new Date(quote.completeDate)
+    this.quotes.push(quote)
+  }
+
   deletequote(isComplete, index){
       if (isComplete) {
           let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
@@ -31,13 +38,7 @@ export class QuoteComponent implements OnInit {
       }
   }
 
-  addNewQuote(quote: Quote){ 
-    let quoteLength = this.quotes.length;
-    quote.id = quoteLength+1;
-    quote.completeDate = new Date(quote.completeDate)
-    this.quotes.push(quote)
-  }
-
+  
   constructor() {}
 
   ngOnInit() {}
