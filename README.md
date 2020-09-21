@@ -13,6 +13,8 @@ those quotes voted on.
 
 ### Website live link
 
+https://tu276.github.io/Quotes
+
 
 ## Development server
 
