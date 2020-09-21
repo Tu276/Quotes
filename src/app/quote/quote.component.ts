@@ -17,20 +17,20 @@ export class QuoteComponent implements OnInit {
   ];
 
 
-  toggleDetails(index: string | number){
+  toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
   }
 
   deletequote(isComplete, index){
-    if (isComplete) {
-      let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
+      if (isComplete) {
+          let toDelete = confirm(`Are you sure you want to delete ${this.quotes[index].name}?`)
 
-      if (toDelete){
-        this.quotes.splice(index,1)
+          if (toDelete){
+            this.quotes.splice(index,1)
+          }
       }
-    }
   }
-  // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!###### check!!!!
+
   addNewQuote(quote: Quote){ 
     let quoteLength = this.quotes.length;
     quote.id = quoteLength+1;

@@ -11,9 +11,11 @@ export class QuoteFormComponent implements OnInit {
   @Output() addQuote = new EventEmitter<Quote>();
 
   submitQuote() {
-    this.addQuote.emit(this.newquote);
+      this.addQuote.emit(this.newquote);
   }
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    
+  }
 }
