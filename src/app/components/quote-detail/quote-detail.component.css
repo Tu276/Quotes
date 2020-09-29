@@ -1,0 +1,14 @@
+.del {
+  background: #CA0B00;
+  color: #fff;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  float: right;
+  height: 2rem;
+  width: 2rem;
+}
+
+.quoteStyle {
+  font-weight: 600;
+}

@@ -1,0 +1,62 @@
+<div class="form">
+    <form >
+        <div class="form-group">
+            <label class="username" for="user">Username</label>
+            <input 
+                required 
+                [(ngModel)]="newQuote.user"
+                name="user" 
+                #user="ngModel" 
+                id="user" 
+                type="text" 
+                placeholder="Enter your name"
+                class="form-control" >
+            <div 
+                class="alert alert-danger" 
+                *ngIf="user.touched && !user.valid">
+                Enter your Username
+            </div>
+        </div>
+    </form>
+    <form >
+        <div class="form-group">
+            <label class="author" for="author">Author</label>
+            <input 
+                required 
+                [(ngModel)]="newQuote.author"
+                name="author" 
+                #author="ngModel" 
+                id="author" 
+                type="text" 
+                placeholder="Enter author's name"
+                class="form-control" >
+            <div 
+                class="alert alert-danger" 
+                *ngIf="author.touched && !author.valid">
+                Author name is required
+            </div>
+            <p class="authorDisplay">{{ newQuote.author }}</p>
+        </div>
+    </form>
+    <div class="form-group">
+        <label class="quote" for="quote">Quote</label>
+        <textarea 
+            required 
+            [(ngModel)]="newQuote.quote" 
+            name="quote" 
+            id="quote" 
+            #quote="ngModel" 
+            cols="10" 
+            rows="3" 
+            placeholder="Enter quote"
+            class="form-control">
+        </textarea>
+        <div 
+            class="alert alert-danger" 
+            *ngIf="quote.touched && !quote.valid">
+            A quote is required
+        </div>
+        <p class="quoteDisplay">{{ newQuote.quote }}</p>
+    </div>
+    <button class="btn btn-primary" (click)="submitQuote()">Submit</button>
+</div>

@@ -1,0 +1,17 @@
+.like{
+    background-color: #0077b6;
+    border-radius: 10%;
+    margin: 0 1% 0 0;
+    height: 2rem;
+    width: 2rem;
+}
+.dislike{
+    background-color: #cf2334;
+    border-radius: 10%;
+    margin: 0 1%;
+    height: 2rem;
+    width: 2rem;
+}
+.votes {
+    padding: 1% 0;
+}

@@ -1,0 +1,28 @@
+<div class="container">
+    <div>
+        <h5 class="post">Post quote</h5>
+        <app-form (addQuote)="addQuote($event)"></app-form>
+    </div>
+    <hr>
+    <h5 class="title">Quotes</h5>
+    <div class="quoteSection" *ngFor = 'let quote of quotes; let i = index'>
+        <div>
+            <p>
+                <app-quote-detail  
+                    [quote]='quote'
+                    (onDelete) = 'deleteQuote($event,i)'
+                >
+                </app-quote-detail>                
+            </p>
+        </div>
+        <app-vote></app-vote>
+            <button (click)='showDetail(i)' class="moreButton">
+                <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-three-dots-vertical" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M9.5 13a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm0-5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0z"/>
+                </svg>
+            </button>
+        <div *ngIf='quote.showDets' class="moreSection">
+            <p>Submitted {{ quote.date | dateCount }} by <strong>{{ quote.user }}</strong></p>
+        </div>
+    </div>
+</div>
